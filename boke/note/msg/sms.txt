@@ -1,0 +1,24 @@
+    /**
+     * Post提交表单
+     */
+    public static void postFromParameters() {
+        String url = "http://v.juhe.cn/wepiao/query"; // 请求链接
+        String KEY = "9488373060c8483a3ef6333353fdc7fe"; // 请求参数
+        
+        OkHttpClient okHttpClient = new OkHttpClient(); // OkHttpClient对象
+        
+        RequestBody formBody = new FormBody.Builder().add("key", KEY).build(); // 表单键值对
+        
+        Request request = new Request.Builder().url(url).post(formBody).build(); // 请求
+        
+        okHttpClient.newCall(request).enqueue(new Callback() {// 回调
+
+            public void onResponse(Call call, Response response) throws IOException {
+                System.out.println(response.body().string());//成功后的回调
+            }
+
+            public void onFailure(Call call, IOException e) {
+                System.out.println(e.getMessage());//失败后的回调
+            }
+        });
+    }

@@ -1,0 +1,61 @@
+public String userid;
+	    public String username;
+	    
+	    public String gridvalue;
+	    public String rowid;
+	    
+	    public String scheduledate;
+	    
+	    public String  	weekday;
+	    public String	timeconfig;
+	    public String	extprop;
+	    public String	state;
+	    public String	flag;
+	    public String	reserve1;
+	    public String	reserve2;
+		
+userid
+username
+gridvalue
+rowid
+scheduledate
+weekday
+timeconfig
+extprop
+state
+flag
+reserve1
+reserve2
+
+
+<property name="id_sub" type="java.lang.Integer"><column name="id_sub" /></property>
+<property name="id_sub" type="java.lang.Integer"><column name="id_sub" /></property>
+<property name="id_sub" type="java.lang.Integer"><column name="id_sub" /></property>
+<property name="id_sub" type="java.lang.Integer"><column name="id_sub" /></property>
+<property name="id_sub" type="java.lang.Integer"><column name="id_sub" /></property>
+<property name="id_sub" type="java.lang.Integer"><column name="id_sub" /></property>
+<property name="id_sub" type="java.lang.Integer"><column name="id_sub" /></property>
+<property name="id_sub" type="java.lang.Integer"><column name="id_sub" /></property>
+<property name="id_sub" type="java.lang.Integer"><column name="id_sub" /></property>
+<property name="id_sub" type="java.lang.Integer"><column name="id_sub" /></property>
+<property name="id_sub" type="java.lang.Integer"><column name="id_sub" /></property>
+<property name="id_sub" type="java.lang.Integer"><column name="id_sub" /></property>
+
+
+
+<property name="userid" type="java.lang.String"><column name="userid" /></property>
+	<property name="username" type="java.lang.String"><column name="username" /></property>
+	<property name="gridvalue" type="java.lang.Integer"><column name="gridvalue" /></property>
+	<property name="rowid" type="java.lang.Integer"><column name="rowid" /></property>
+	
+	<property name="scheduledate" type="java.lang.String"><column name="scheduledate" /></property>
+	<property name="weekday" type="java.lang.String"><column name="weekday" /></property>
+	<property name="timeconfig" type="java.lang.String"><column name="timeconfig" /></property>
+	<property name="extprop" type="java.lang.String"><column name="extprop" /></property>
+	<property name="state" type="java.lang.String"><column name="state" /></property>
+	<property name="flag" type="java.lang.String"><column name="flag" /></property>
+	<property name="reserve1" type="java.lang.String"><column name="reserve1" /></property>
+	<property name="reserve2" type="java.lang.String"><column name="reserve2" /></property>
+	
+	
+			

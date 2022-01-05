@@ -1,0 +1,27 @@
+https://blog.csdn.net/chengmi6360/article/details/100698584
+
+	把form表单的值序列化成一个Json对象，如{username：admin，password：123}
+        var params = $('#searchForm').serializeObject();
+
+把form表单的值序列化成一个字符串，如username=admin&password=admin
+var params = $('#searchForm').serialize();
+将字符串转换为Json对象
+JSON.parse(str)
+
+/////////////////////// 2021.11.11 ajax数据校验 
+
+ var chat=$('#inputbox').val();
+	  
+	  if (chat == null || chat=='' || chat == undefined)
+		  {
+		  alert('消息不能为空');
+		  return;
+		  }
+		  
+	
+	  /////////// 发出消息 server
+	  console.log( getTime() );
+	  $('#chattime').val( getTime() );
+	  
+	  var params = $('#msgSendForm').serialize();
+	  console.log( '#msgSendForm:' +params );

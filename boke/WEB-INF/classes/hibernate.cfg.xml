@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">
+            org.hibernate.dialect.MySQL5Dialect
+        </property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <!-- 配置启用二级缓存 -->
+        <property name="hibernate.cache.use_second_level_cache">true</property>
+        
+        <!--配置二级缓存的提供商 -->
+        <property name="hibernate.cache.provider_class">
+            org.hibernate.cache.EhCacheProvider
+        </property>
+        
+        <!-- 启用查询缓存 -->
+        <property name="hibernate.cache.use_query_cache">true</property>
+        
+        <!-- 映射文件 -->
+        <mapping resource="edu/ahpu/boke/domain/Message.hbm.xml" />
+        <mapping resource="edu/ahpu/boke/domain/Face.hbm.xml" />
+        <mapping resource="edu/ahpu/boke/domain/User.hbm.xml" />
+        <mapping resource="edu/ahpu/boke/domain/Channel.hbm.xml" />
+        <mapping resource="edu/ahpu/boke/domain/Fan.hbm.xml" />
+        <mapping resource="edu/ahpu/boke/domain/Comment.hbm.xml" />
+        <mapping resource="edu/ahpu/boke/domain/Video.hbm.xml" />
+        <mapping resource="edu/ahpu/boke/domain/Config.hbm.xml" />
+		<!--         2021.8.31 user -->
+        <mapping resource="edu/ahpu/boke/domain/SysUser.hbm.xml" />
+		<!--         2021.9.1 会诊大厅 -->
+        <mapping resource="edu/ahpu/boke/domain/Appointment.hbm.xml" />
+		<!--         2021.9.2 参会者管理 -->
+        <mapping resource="edu/ahpu/boke/domain/AppointmentUser.hbm.xml" />
+		<!--         2021.9.16 参会者管理 -->
+        <mapping resource="edu/ahpu/boke/domain/AppointmentFiles.hbm.xml" />
+		<!--         2021.10.14 聊天 -->
+        <mapping resource="edu/ahpu/boke/domain/Msginfo.hbm.xml" />
+        <mapping resource="edu/ahpu/boke/domain/Msginfoprivate.hbm.xml" />
+		<!--         2021.10.27 系统消息 -->
+        <mapping resource="edu/ahpu/boke/domain/MsginfoSys.hbm.xml" />
+
+		<!--         2021.11.15 日程表 -->
+        <mapping resource="edu/ahpu/boke/domain/UserSchedule.hbm.xml" />
+		<!--         2021.12.4 消息的会话 MsgFriendPrivate.hbm  -->
+        <mapping resource="edu/ahpu/boke/domain/MsgFriendPrivate.hbm.xml" />
+
+        <!-- 配置类级别的二级缓存 -->
+        <class-cache class="edu.ahpu.boke.domain.Channel" usage="read-write" />
+        <class-cache class="edu.ahpu.boke.domain.Face" usage="read-write" />
+        <class-cache class="edu.ahpu.boke.domain.Config" usage="read-write" />
+    </session-factory>
+</hibernate-configuration>

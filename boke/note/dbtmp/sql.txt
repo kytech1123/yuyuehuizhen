@@ -1,0 +1,49 @@
+ select
+        userschedu0_.id as id15_,
+        userschedu0_.userid as userid15_,
+        userschedu0_.username as username15_,
+        userschedu0_.gridvalue as gridvalue15_,
+        userschedu0_.rowid as rowid5_15_,
+        userschedu0_.scheduledate as schedule6_15_,
+        userschedu0_.weekday as weekday15_,
+        userschedu0_.timeconfig as timeconfig15_,
+        userschedu0_.extprop as extprop15_,
+        userschedu0_.state as state15_,
+        userschedu0_.flag as flag15_,
+        userschedu0_.reserve1 as reserve12_15_,
+        userschedu0_.reserve2 as reserve13_15_ 
+    from
+        boke.userschedule userschedu0_ 
+    where
+        1=1 
+        and userschedu0_.id='4' 
+        and userschedu0_.scheduledate='2021-11-15' 
+    order by
+        userschedu0_.scheduledate asc
+        
+        
+ select
+        userschedu0_.id as id15_,
+        userschedu0_.userid as userid15_,
+        userschedu0_.username as username15_,
+        userschedu0_.gridvalue as gridvalue15_,
+        userschedu0_.rowid as rowid5_15_,
+        userschedu0_.scheduledate as schedule6_15_,
+        userschedu0_.weekday as weekday15_,
+        userschedu0_.timeconfig as timeconfig15_,
+        userschedu0_.extprop as extprop15_,
+        userschedu0_.state as state15_,
+        userschedu0_.flag as flag15_,
+        userschedu0_.reserve1 as reserve12_15_,
+        userschedu0_.reserve2 as reserve13_15_ 
+    from
+        boke.userschedule userschedu0_ 
+    where
+        1=1 
+        and userschedu0_.id='4'        
+    order by
+        userschedu0_.scheduledate asc
+        
+        
+        
+UPDATE sys_user set `password`=''

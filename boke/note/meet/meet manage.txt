@@ -1,0 +1,44 @@
+医助聊天图标
+
+用户权限：当前用户是医助，显示“协助TA”
+
+$('.view_assistantname').text(function(i,origText){
+		var rowid= this.id;
+	});
+	
+	//2021.9.25 添加医助 	如果有医助，隐藏链接
+	$('.view_assistantname').text(function(i,origText){
+				var rowid= this.id;
+			//如果当前用户不是医助，不显示 协助TA
+			console.log( $('#ssusertype').val() );
+			if (  $('#ssusertype').val() == 'assistant'  )
+				{
+						$('#help'+rowid).show();						
+				}
+			else{
+						$('#help'+rowid).hide();						
+						
+				}
+				
+			if( origText !=""&& origText!=null&& origText!=undefined )
+			{
+				$('#help'+rowid).hide();
+				$('#word'+rowid).show();// 显示提示文字 医助，显示聊天图标
+				$('#icon'+rowid).show();// 显示提示文字 医助，显示聊天图标
+				$('#icon'+rowid).css({"width":"45px"});
+			}
+			else
+			{
+				$('#word'+rowid).hide();
+				$('#icon'+rowid).hide();
+			}
+			
+	});	
+	
+	
+	参会方式
+  <tr>
+	   <td></td><td>角色</td> <td>姓名</td>
+	  
+	    <td>参会方式</td> <td></td> 
+	    </tr>

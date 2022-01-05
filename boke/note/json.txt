@@ -1,0 +1,32 @@
+ D:\19学习\JSONObject与JSONArray使用中所需要的完全jar包整理\JSONObject与JSONArra
+y使用中所需要的完全jar包 的目录
+
+2015/07/10  17:38    <DIR>          .
+2015/07/10  17:38    <DIR>          ..
+2015/07/10  17:33           188,671 commons-beanutils.jar
+2015/07/10  17:33           559,366 commons-collections-3.1.jar
+2015/07/10  17:32           169,763 commons-lang.jar
+2015/07/02  15:45            60,841 commons-logging.jar
+2015/07/10  17:35            86,487 ezmorph-1.0.6.jar
+2015/07/10  17:36           143,977 json-lib-2.2.2-jdk15.jar
+
+
+
+{"applyBeginTime":null,"applyEndTime":null,"applyTime":
+{"date":25,"day":1,"hours":15,"minutes":0,"month":9,"nanos":0,"seconds":0,
+"time":1635145200000,"timezoneOffset":-480,"year":121},
+"closed":0,"content":"请描述主要问题925",
+"createdAt":null,"createdBy":"","createdOrg":"","dispatchTime":null,"doctorAccount":"","doctorId":"4","doctorName":"唐子奇","doctorPhone":"","expertNum":0,"extprop":"","files":"","id":"f7360","level":"","levelName":"","majors":"心内科","qaMeetNum":0,"receivers":0,"remarks":"","reportNum":0,"report_file":null,"reserve1":"","reserve2":"","revolved":0,"setAddreport":"on","setLive":"on","setMaxreport":3,"solved":0,"status":"未开始","title":"求帮助","updatedAt":null,"updatedBy":"","updatedOrg":"","valid":""},
+
+<div class="con" id="mystartDivTemp">		
+	
+	<div class="datalist_item" id="mystartItem">
+				<div class='p1'>
+			<a href='chatmsgTeam.jsp?appointmentId=dd1&chatroom=dd2'>
+			<img class='index_icon' 
+				src='${ctx}/images/msg/ui_chat_team.png'/></a>
+				</div>
+				<div class='p2'>dd3				
+				</div>
+		</div>
+</div>

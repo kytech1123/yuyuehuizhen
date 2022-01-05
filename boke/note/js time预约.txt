@@ -1,0 +1,17 @@
+ https://www.sxyygh.com/gh/doctor.asp?id=1641250
+ 
+ <td align="center">
+            <a href='gh_orderinfo.asp?workid=20122476&id=1641250&acc1ess1type=1&price=25.00&periodname=%C9%CF%CE%E7&workdate=2021-10-25&workrank=%D6%F7%C8%CE%D2%BD%CA%A6'  onMouseOver="show(this,'mydiv1','　剩余预约量：16',event);" onMouseOut="hide(this,'mydiv1');"><font color=blue>预约</font></a>
+        </td>
+      
+        <td align="center">
+            <a href='gh_orderinfo.asp?workid=20137231&id=1641250&acc1ess1type=1&price=25.00&periodname=%C9%CF%CE%E7&workdate=2021-10-26&workrank=%D6%F7%C8%CE%D2%BD%CA%A6'  onMouseOver="show(this,'mydiv1','　剩余预约量：28',event);" onMouseOut="hide(this,'mydiv1');"><font color=blue>预约</font></a>
+        </td>
+      
+        <td align="center">
+            <a href='gh_orderinfo.asp?workid=20152102&id=1641250&acc1ess1type=1&price=25.00&periodname=%C9%CF%CE%E7&workdate=2021-10-27&workrank=%D6%F7%C8%CE%D2%BD%CA%A6'  onMouseOver="show(this,'mydiv1','　剩余预约量：31',event);" onMouseOut="hide(this,'mydiv1');"><font color=blue>预约</font></a>
+        </td>
+      
+        <td align="center">
+            <a href='gh_orderinfo.asp?workid=20167479&id=1641250&acc1ess1type=1&price=25.00&periodname=%C9%CF%CE%E7&workdate=2021-10-28&workrank=%D6%F7%C8%CE%D2%BD%CA%A6'  onMouseOver="show(this,'mydiv1','　剩余预约量：30',event);" onMouseOut="hide(this,'mydiv1');"><font color=blue>预约</font></a>
+     

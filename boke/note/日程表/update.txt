@@ -1,0 +1,34 @@
+// 先查后改
+    public String updateSchedule(String userid,String username, 
+    		String gridvalue, String rowid, String scheduledate)
+    {
+    	UserSchedule entity=userScheduleDao.findFirstByCondition(" and o.userid='"+userid+"'"
+    			+" and o.scheduledate='"+ scheduledate+"'", null, false);
+    	
+    	String timeconfig;
+    	if(entity==null)
+    	{
+    			entity = new UserSchedule();
+    			timeconfig ="0000000000";
+    	}
+    	else
+    		 	timeconfig= entity.getTimeconfig();
+    	
+    	entity.setScheduledate(scheduledate);
+    	entity.setUserid(userid);
+    	entity.setUsername(username);
+    	
+    	
+    	int row= Integer.parseInt(rowid);
+    	
+    	char[] chrCharArray = timeconfig.toCharArray();
+    	
+    	chrCharArray[row] = gridvalue.charAt(0);  //gridvalue: "1" "2" 只有一个字符，代表出诊，免打扰,"3" 已约
+    	timeconfig = String.valueOf( chrCharArray);
+    	
+		entity.setTimeconfig(timeconfig);
+		
+		userScheduleDao.save(entity);
+		
+    	return "ok";
+    }

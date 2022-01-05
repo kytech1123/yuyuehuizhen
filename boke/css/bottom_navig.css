@@ -1,0 +1,48 @@
+/* ÁôÒ»¸ö¿Õcss */
+body{
+	margin:0px;
+}
+.bottom_nag {
+	padding: 0;
+	margin: 0;
+	height: 100px;
+	width: 100%;
+	background-color: #fff;
+	position: fixed;
+	left: 0;
+	top: 90%;
+}
+
+.navig_menu {
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	position: relative;
+	float: left;
+	height: 40px;
+	width: 100%;
+	overflow: hidden;
+	background-color:#270; 
+}
+
+.navig_menu li {
+	padding: 0;
+	margin-right: 2px;
+	overflow: hidden;
+	list-style: none;
+	display: inline-block;
+	float: left;
+	width: 24%;
+	height: 40px;
+	line-height: 40px;
+	text-align: center
+}
+
+.navig_menu li a {
+	color:#5b5;
+	text-decoration: none;
+	display: block;
+	background-color: #fff;
+	font-size:18px;
+}
+</style>

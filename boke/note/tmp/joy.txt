@@ -1,0 +1,36 @@
+.joynav UL LI {
+	PADDING-BOTTOM: 0px;
+	PADDING-LEFT: 6px;
+	PADDING-RIGHT: 14px;
+	PADDING-TOP: 2px
+}
+
+.joynav UL LI.channel {
+	PADDING-BOTTOM: 0px;
+	PADDING-LEFT: 15px;
+	PADDING-RIGHT: 8px;
+	PADDING-TOP: 2px
+}
+
+.joynav UL LI.end {
+	PADDING-RIGHT: 14px !important
+}
+
+.joynav UL LI.startjoy {
+	Z-INDEX: 1;
+	POSITION: relative;
+	PADDING-LEFT: 38px;
+	MARGIN-LEFT: 0px
+}
+
+.joynav UL LI.hotjoy {
+	Z-INDEX: 1;
+	POSITION: relative;
+	PADDING-RIGHT: 38px;
+	MARGIN-RIGHT: 0px
+}
+
+.joynav UL LI.spech1.channel {
+	BACKGROUND: none transparent scroll repeat 0% 0%;
+	MARGIN-LEFT: 0px
+}

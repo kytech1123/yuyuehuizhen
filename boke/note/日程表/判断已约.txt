@@ -1,0 +1,52 @@
+ @Override
+    public String setTimeConfig(String userId, String userName, String userRole, String id) {
+    	if( userRole.equals("汇报人") )
+    		return "success";
+    				
+    	Appointment appointment=appointmentDao.findFirstByCondition(" and o.id='"+id+ "'", null, false);
+    	String scheduledate = SessionUtils.transTimestamp( appointment.getApplyTime() );
+    	
+    	UserSchedule schedule= userScheduleDao.findFirstByCondition(" and o.userid='"+userId+ "'"
+    			+" and o.scheduledate='"+ scheduledate.substring(0,10)+"'", null, false);
+    	
+    	////////////////////////////////
+    	String a= appointment.getApplyBeginTime().substring(0,5);
+    	String b= appointment.getApplyEndTime().substring(0,5);
+    	
+    	int timea = SessionUtils.indexSchedulePeriod(a);
+    	int timeb = SessionUtils.indexSchedulePeriod(b);
+    	// 14:30  16:30:  4,6
+    	// 14:30  16:00:  4,5
+    	if(b.endsWith("00"))
+    		timeb--;
+    	
+    	// 没有日程表，添加新的日程记录
+    	if(schedule==null)
+    	{
+    		updateSchedule( userId, userName, "3",		 timea+"",timeb+"", scheduledate.substring(0,10));
+    		return "success";
+    	}
+
+    	
+    	// 有日程表，判断是否可约
+    	char [] timeconfig= schedule.getTimeconfig().toCharArray(); 
+    	String result="";
+    	// 14:30  16:30:  4,6
+    	// 14:30  16:00:  4,5
+    	while(timea<= timeb)
+    	{
+    		if( timeconfig[timea ] != '0' )
+    			result+= SessionUtils.getSchedulePeriod2(timea)+" 不可约;";
+    		else
+    			timeconfig[timea] = '3';
+    		
+    		timea++;
+    	}
+    	
+    	if(result.equals(""))
+    	{
+    		return "success";
+    	}
+    	else
+    		return result;
+    }

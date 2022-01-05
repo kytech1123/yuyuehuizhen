@@ -1,0 +1,96 @@
+<style>
+body{
+	
+}
+	.search{
+			background-color: #fff;
+			padding: 0;
+            margin: 5px;
+            height: 70px;
+            width: 100%;
+            position: fixed;
+            left: 0;
+            top:70px;
+}
+	.search form div input{
+			font-size: 20px;
+			
+}
+   .search form select {
+			font-size: 20px;
+			width: 24%;
+}  
+   option{
+   		font-size: 20px;
+   }
+	.main_meet{
+   		font-size: 20px;
+   }
+   
+   .meet_item{
+    margin£º10px;
+    padding£º10px;
+   	border: 2px solid green;
+   	border-radius: 10px;
+   	height:180px;
+   }
+   .meet_item_help{
+    margin£º10px;
+    padding£º10px;
+   	border: 2px solid green;
+   	border-radius: 10px;
+   	height:260px;
+   }
+   .meet_item_before{
+    margin£º10px;
+    padding£º10px;
+   	border: 2px solid green;
+   	border-radius: 10px;
+   	height:460px;
+   }
+   .meet_item_p1{
+    padding£º5px;
+   	float:left;
+   }
+   .meet_item_p2{
+   	float:right;
+   }
+   .button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 8px;
+    cursor: pointer;
+	border-radius: 5px;
+}
+/*  2021.8.31 admin */
+.meet_item_p1 a{
+    padding£º10px;
+   	font-size: 16px;
+   }
+/*     2021.9.1 user list lvyanyang */
+
+.datalist_item{
+	margin£º10px;
+    padding£º10px;
+   	border: 2px solid green;
+   	border-radius: 10px;
+   	height:50px;
+   	width:100%;
+}
+.datalist_item div{
+	float:left;
+	font-size: 16px;
+	border-right:2px solid #6B6;
+}
+.datalist_item div a{
+	padding£º10px;
+	background-color: #6b6;
+	color: #fff;
+}
+</style>

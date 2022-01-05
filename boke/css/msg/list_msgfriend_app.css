@@ -1,0 +1,17 @@
+<style>
+body{
+	
+}
+
+   .friend_list_v_item{
+    	border-bottom: 2px solid #333;
+    	height: 55px;
+   }
+   .friend_list_v_item .v_left{
+    	float:left;
+   }
+   .v_name{
+   		float:left;
+   }
+
+</style>

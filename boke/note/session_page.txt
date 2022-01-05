@@ -1,0 +1,29 @@
+<%@ page  import="edu.ahpu.boke.domain.*"  %>
+<%@ page  import="edu.ahpu.boke.util.*"  %>
+
+<%
+	// 添加会诊专家
+	// 读取当前登录用户信息 
+	SysUser ssUser=SessionUtils.getUserFormSession(request);
+	String utype="err";
+	String uname="errname";
+	if(ssUser!=null )
+	{
+		utype=ssUser.getUsertype();
+		uname = ssUser.getName();
+	}
+	out.print("<input type='hidden' id='ssusertype' value='"+ utype +"'>");						
+	out.print("<input type='hidden' id='ssusername' value='"+ uname +"'>");						
+					
+		
+%>
+
+assistant
+
+	<br><span id='username'></span>
+					<br><span id='usercom'></span>
+					<br><span id='useroffice'></span>
+					<br><span id='userlevel'></span>
+					
+D:\jspwork\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\boke\js\js_schedule
+					

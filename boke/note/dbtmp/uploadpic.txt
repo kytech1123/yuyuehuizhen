@@ -1,0 +1,40 @@
+s = $('#liveqacode')[0].src;
+	/* 	#liveqacode file:///D:/jspwork/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/boke/qaserver/tpic1205_11248.png
+	*/
+	console.log('#liveqacode '+ s); // file:///D:/qaserver/qa7329e75.png
+	if( s== '' || s.indexOf('?')>-1 )
+		$('#liveqacode').hide();
+	else
+	{
+			// 		Src=qaserver/tpic1205_11248.png
+			s='qaserver'+ s.substring( s.lastIndexOf('/'), s.length);
+			$('#liveqacode').attr('src', s);
+		}
+	
+	//海报路径 2021.12.5
+	 s= $('#img_liveBill')[0].src;
+	 if( s== '' || s.indexOf('?')>-1 )
+			$('#img_liveBill').hide();
+	 else
+	 {
+				s='qaserver'+ s.substring( s.lastIndexOf('/'), s.length);
+				$('#img_liveBill').attr('src', s);
+				$('#img_liveBill').css({'width': '150px' });
+			}
+			
+数据库		
+D:\jspwork\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\boke\qaserver\tpic1205_11248.png			
+PC浏览器 file:///D:/jspwork/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/boke/qaserver/bill1205_b643e.jpg
+
+//////////////////////////////////////
+	 console.log('s2:'+s2);
+// 	 if( s== '' || s.indexOf('?')>-1 )
+// 			$(id).hide();
+// 	 else
+// 	 {
+// 				s= baseurl+ s.substring( s.lastIndexOf('/'), s.length);
+// 				$(id).attr('src', s);
+// 				$(id).css({'width': '150px' });
+// 	}
+// 	 t=s2.substr( s2.lastIndexOf('/'), s2.length);
+	 $(id).parent().append( '<br>s2:'+s2+'<br> index:'+  strfind(s2,'/,\\') +'<br>' );

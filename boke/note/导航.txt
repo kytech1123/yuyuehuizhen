@@ -1,0 +1,13 @@
+<!-- topµ¼º½ -->
+<div class="top_nag">
+	<div class="top_p1">
+		<a href="index.jsp">
+		<img src="images/top/back.png">
+		</a>
+	</div>
+	<div class="top_p2">
+	<a href="index.jsp">
+	<img src="images/top/set.png">
+	</a>
+	</div>
+</div>

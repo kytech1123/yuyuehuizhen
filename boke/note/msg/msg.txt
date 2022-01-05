@@ -1,0 +1,26 @@
+消息提示 <div class='msgtip'>&nbsp;&nbsp;8&nbsp;</div>
+
+http://localhost:8080/boke/msg_friendlist.do?appointmentId=f7360
+
+[{"appointmentId":"f7360","assistantId":"21","assistantName":"王丹","createdAt":null,"createdBy":"唐子奇","createdOrg":"4","extprop":"","id":"5a206d2fb0b2481e8bdcc62862faf82f","level":"","levelName":"","meetAddr":"","meetBefore":"","meetInfo":"","meetTool":"","remarks":"","reserve1":"","reserve2":"","solved":0,"updatedAt":null,"updatedBy":"","updatedOrg":"","userAccount":"","userId":"4","userName":"唐子奇","userPhone":"","userRole":"汇报人","valid":""},{"appointmentId":"f7360","assistantId":"21","assistantName":"王丹","createdAt":null,"createdBy":"韩余晖","createdOrg":"3","extprop":"","id":"2a6859b40606429c962bd98bf95c723c","level":"","levelName":"","meetAddr":"","meetBefore":"","meetInfo":"","meetTool":"","remarks":"等待同意","reserve1":"","reserve2":"","solved":0,"updatedAt":null,"updatedBy":"","updatedOrg":"","userAccount":"","userId":"4509","userName":"吴熙达","userPhone":"","userRole":"专家","valid":""},{"appointmentId":"f7360","assistantId":"","assistantName":"","createdAt":null,"createdBy":"韩余晖","createdOrg":"3","extprop":"","id":"f5aafd58e60e4cb7804d545468ffb0a7","level":"","levelName":"","meetAddr":"","meetBefore":"","meetInfo":"","meetTool":"","remarks":"等待同意","reserve1":"","reserve2":"","solved":0,"updatedAt":null,"updatedBy":"","updatedOrg":"","userAccount":"","userId":"4515","userName":"陈柏","userPhone":"","userRole":"专家","valid":""}]
+
+
+//////// 发送
+  var msgdiv="<div class='msg_list_item' >" 
+		+"<div class='p1_me'><img class='index_icon' src='${ctx}/images/face/usericon_lv.png'></div>"
+		+"<div class='content_me' >"
+		+chat
+		+"</div></div>";
+	  $('#msg_list').append(msgdiv);
+
+
+	  ////////// 回复
+	  var strAr=['正在为您处理，请稍等','好的','收到','马上','请咨询客服18234498304'];
+	  var talkid= Math.floor( Math.random()* 5); 
+	  
+	  msgdiv="<div class='msg_list_item' >" 
+			+"<div class='p1'><img class='index_icon' src='${ctx}/images/ui/user_help.png'></div>"
+			+"<div class='msg_list_p2' >"
+			+strAr[ talkid]
+			+"</div></div>";
+	  $('#msg_list').append(msgdiv);

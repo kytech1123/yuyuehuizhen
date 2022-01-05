@@ -1,0 +1,36 @@
+<div class="datalist_item">
+				<div class='p1'><img class="index_icon" src="${ctx}/images/user_icon.png"></div>
+				<div class='p2'>方欣英
+								神经内科<br>
+				山西中医药大学附属医院
+				</div>
+	</div>
+	
+	<div class="datalist_item">
+				<div class='p1'>
+				<img class="index_icon" src="${ctx}/images/ui/user_help.png"></div>
+				<div class='p2'>赵雅<br>
+				举办会诊：35场,协助专家：60人次
+				</div>
+	</div>
+		<div class="datalist_item">
+				<div class='p1'>
+				<img class="index_icon" src="${ctx}/images/ui/user_help.png"></div>
+				<div class='p2'>王丹<br>
+				举办会诊：35场,协助专家：60人次
+				</div>
+	</div>
+		<div class="datalist_item">
+				<div class='p1'>
+				<img class="index_icon" src="${ctx}/images/ui/user_help.png"></div>
+				<div class='p2'>项锡山<br>
+				举办会诊：35场,协助专家：60人次
+				</div>
+				
+<div style= "clear:both" ></div>
+		<br> 占位
+				
+friendtype:
+1.sysmsg
+2.doctor
+3.assistant

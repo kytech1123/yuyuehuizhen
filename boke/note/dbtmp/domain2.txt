@@ -1,0 +1,45 @@
++",public  String  	username
++",public  String  	friendid
++",public  String  	friendname
++",public  String  	friendtype
++",public  String  	roomid
++",public  String  	roomname
++",public  String  	state
++",public  String  	flag1
++",public  String  	flag2
++",public  String  	conversation_time
++",public  String  	remarks
++",public  String  	extprop
++",public  String  	reserve1
++",public  String  	reserve2
++",
+
++",username:"+ username
++",friendid:"+ friendid
++",friendname:"+ friendname
++",friendtype:"+ friendtype
++",roomid:"+ roomid
++",roomname:"+ roomname
++",state:"+ state
++",flag1:"+ flag1
++",flag2:"+ flag2
++",conversation_time:"+ conversation_time
++",remarks:"+ remarks
+
+
+
+<property name="username" type="java.lang.String"><column name="username" /></property>
+<property name="friendid" type="java.lang.String"><column name="friendid" /></property>
+<property name="friendname" type="java.lang.String"><column name="friendname" /></property>
+<property name="friendtype" type="java.lang.String"><column name="friendtype" /></property>
+<property name="roomid" type="java.lang.String"><column name="roomid" /></property>
+<property name="roomname" type="java.lang.String"><column name="roomname" /></property>
+<property name="state" type="java.lang.String"><column name="state" /></property>
+<property name="flag1" type="java.lang.String"><column name="flag1" /></property>
+<property name="flag2" type="java.lang.String"><column name="flag2" /></property>
+<property name="conversation_time" type="java.lang.String"><column name="conversation_time" /></property>
+<property name="remarks" type="java.lang.String"><column name="remarks" /></property>
+<property name="extprop" type="java.lang.String"><column name="extprop" /></property>
+<property name="reserve1" type="java.lang.String"><column name="reserve1" /></property>
+<property name="reserve2" type="java.lang.String"><column name="reserve2" /></property>
+

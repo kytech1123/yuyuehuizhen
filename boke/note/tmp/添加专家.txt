@@ -1,0 +1,18 @@
+<%
+	// 添加会诊专家
+	SysUser ssUser=SessionUtils.getUserFormSession(request);
+	String  act_ok_info = (String)SessionUtils.ctxget("act_ok_info");
+	if(act_ok_info!=null && act_ok_info.contains(":") )
+	{
+		int data_index=  act_ok_info.indexOf(":" );
+		String data= act_ok_info.substring(data_index, act_ok_info.length());
+		String[] dataprop= data.split("," );
+		
+		if( dataprop[1].equals("专家")
+				&& ssUser.getUsertype().equals("assistant" ))
+		{
+						
+		}
+		
+	}
+%>

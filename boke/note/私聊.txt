@@ -1,0 +1,112 @@
+//db
+select
+        msginfosys0_.id as id14_,
+        msginfosys0_.id_sub as id2_14_,
+        msginfosys0_.chatroom as chatroom14_,
+        msginfosys0_.msgfromid as msgfromid14_,
+        msginfosys0_.msgfromname as msgfromn5_14_,
+        msginfosys0_.msgtoid as msgtoid14_,
+        msginfosys0_.msgtoname as msgtoname14_,
+        msginfosys0_.msgtype as msgtype14_,
+        msginfosys0_.chattime as chattime14_,
+        msginfosys0_.content as content14_,
+        msginfosys0_.state as state14_,
+        msginfosys0_.remark as remark14_,
+        msginfosys0_.extprop as extprop14_,
+        msginfosys0_.reverse1 as reverse14_14_,
+        msginfosys0_.reverse2 as reverse15_14_,
+        msginfosys0_.extdata1 as extdata16_14_,
+        msginfosys0_.extdata2 as extdata17_14_ 
+    from
+        boke.msginfosys msginfosys0_ 
+    where
+        1=1 
+        and msginfosys0_.msgtoid='1' 
+        and msginfosys0_.msgfromid='4' 
+    order by
+        msginfosys0_.chattime asc
+        
+        
+	<div class="msg_list_item">
+				<div class='p1'>
+				<img class="index_icon" src="${ctx}/images/ui/user_help.png">
+				</div>
+				<div class='msg_list_p2' >您好！${param.msgtoname}[${param.msgtoid}] 
+				</div>
+		</div>
+		////////////////////////////////
+// css
+$('.msg_list_p2').css({
+		  "float":"left",
+		  "font-size":"18px",
+		  "padding":"5px",
+		  "border":"2px solid green", 
+		  "border-radius" :"5px" ,		  
+		  });
+	  
+	  $('.msg_list_p2').each(function(){
+		  var t=$(this).css('width');
+		  var w= parseInt( t.replace(/px/, '')); 
+		  console.log(  t+',' + w);
+		  if( w >240)
+			  $(this).css('width', '240px');
+	  });
+	
+	  console.log("chat friend -- msg_list_p2_me");
+	  
+	  $('.p1_me').css({
+		  "float":"right",
+		  });
+
+
+//function
+ 
+  function sendmsg(){
+	  console.log('sendmsg');
+	  var chat=$('#inputbox').val();
+	  
+	  if (chat == null || chat=='' || chat == undefined)
+		  {
+		  alert('消息不能为空');
+		  return;
+		  }
+		  
+	  
+	  var msgdiv="<div class='msg_list_item' >" 
+		+"<div class='p1_me'><img class='index_icon' src='${ctx}/images/face/usericon_lv.png'></div>"
+		+"<div class='content_me' >"
+		+chat
+		+"</div></div>";
+	  $('#msg_list').append(msgdiv);
+	  
+	  
+	  var strAr=['正在为您处理，请稍等','好的','收到','马上','请咨询客服18234498304'];
+	  var talkid= Math.floor( Math.random()* 5); 
+	  
+	  msgdiv="<div class='msg_list_item' >" 
+			+"<div class='p1'><img class='index_icon' src='${ctx}/images/ui/user_help.png'></div>"
+			+"<div class='msg_list_p2' >"
+			+strAr[ talkid]
+			+"</div></div>";
+	  $('#msg_list').append(msgdiv);
+	  
+	  //css
+	  $('.p1_me').css({"float": "right" });
+	  
+	  $('.msg_list_p2').css({
+		  "float":"left",
+		  "font-size":"18px",
+		  "padding":"5px",
+		  "border":"2px solid green", 
+		  "border-radius" :"5px" ,		  
+		  });
+	  
+	  $('.msg_list_p2').each(function(){
+		  var t=$(this).css('width');
+		  var w= parseInt( t.replace(/px/, '')); 
+		  console.log(  t+',' + w);
+		  if( w >240)
+			  $(this).css('width', '240px');
+	  });
+  }
+  

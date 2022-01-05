@@ -1,0 +1,90 @@
+http://192.168.226.94:8080/boke
+
+E:\2020互联网医疗\5、软件项目\4、数据库工作
+
+
+ public String findallApp()
+    {
+    	System.out.println("info act: LoginAction findall_app");
+    	
+    	List<SysUser> list  = userService.findByCondition("and o.usertype='doctor'");
+    	ActionContext.getContext().put("userlist", list);
+    	return "user_list_app";
+    }
+o.usertype=str
+
+unknown column
+
+
+	"<div class='meet_item'>"
+					+"<div class='meet_item_p1'>"
+							+view_row
+					+"</div>"
+					+"<div class='meet_item_p2'>"
+							+data_row[6]+"&nbsp;<br><br>"
+							+"<a href='meet_detail.jsp'>详情</a>"+"&nbsp;<br><br>"
+							+"<a href='meet_manage.jsp'>管理</a>"+"&nbsp;<br>"
+					+"</div>"
+					+"</div>"
+					
+列表项
+	<div class='meet_item'>
+					<div class='meet_item_p1'>
+							+view_row
+					</div>
+					<div class='meet_item_p2'>
+							+data_row[6]&nbsp;<br><br>
+							<a href='meet_detail.jsp'>详情</a>&nbsp;<br><br>
+							<a href='meet_manage.jsp'>管理</a>&nbsp;<br>
+					</div>
+					</div>
+					
+<span id="view_item">
+					${item_data.content}
+					</span>
+					<span id="view_item">${item_data.reportNum  } </span> <span
+						id="view_item">${item_data.qaMeetNum  } </span> <span
+						id="view_item">${item_data.expertNum  } </span>
+
+
+				</div>
+				<div class='meet_item_p2'>
+					<br> <span id="view_item">${item_data.status  }</span> <br>
+
+					<a href="${ctx}/meet_findone.do?id=${item_data.id}">&nbsp;详情&nbsp;</a><br>
+					&nbsp;&nbsp;<a
+						href="${ctx}/meet_findoneManage.do?id=${item_data.id}">&nbsp;管理&nbsp;</a>
+				</div>
+
+上传文件：
+4f93679fd1.pptx	D:\jspwork\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps\boke\video\4f93679fd1.pptx
+
+upload_3773c21a_17beee76636__7fe7_00000001.tmp	D:\jspwork\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\work\Catalina\localhost\boke\upload_3773c21a_17beee76636__7fe7_00000001.tmp
+
+
+下载文件：
+http://localhost:8080/boke/download.do?FileName=091c6f1155.pptx&FilePath=D:\qaserver\091c6f1155.pptx
+
+<%
+	// 添加会诊专家
+	// 读取当前登录用户信息 
+	SysUser ssUser=SessionUtils.getUserFormSession(request);
+	String utype="err";
+	if(ssUser!=null )
+	{
+		utype=ssUser.getUsertype();
+	}
+	out.print("<input type='hidden' id='ssusertype' value='"+ utype +"'>");						
+	out.print("<input type='hidden' id='ssmenutype' value='"+ 
+		SessionUtils.ctxget("menutype") +"'>");						
+		
+%>
+
+
+192.168.79.94
+http://localhost:8080/boke/msg/chatfriend.jsp
+
+http://192.168.79.94:8080/boke
+
+192.168.0.100
+http://192.168.0.100:8080/boke

@@ -1,0 +1,61 @@
+select `appointment_user`.`appointment_id` 
+AS `appointment_id`,
+
+count(`appointment_user`.`user_id`) 
+AS `COUNT(user_id)`,
+
+count(`appointment_user`.`assistant_id`) 
+AS `count(``appointment_user``.``assistant_id``)`,
+
+count(((`appointment_user`.`user_role` = _utf8'汇报人') or NULL)) AS `count(``appointment_user``.``user_role``  )` 
+
+from `appointment_user` group by `appointment_user`.`appointment_id`
+
+////////////////////////////////// 汇报人
+
+select `appointment_user`.`appointment_id` AS `meet_id`,
+count(`appointment_user`.`user_id`) AS `userrole1sum`,
+count(`appointment_user`.`assistant_id`) AS `assisrole2sum` 
+from `appointment_user` where (`appointment_user`.`user_role` = _utf8'汇报人')
+	 group by `appointment_user`.`appointment_id`
+
+///////////////////////////////  专家数、专家的医助
+
+select `appointment_user`.`appointment_id` AS `meetid_3`,
+
+count(`appointment_user`.`user_id`) AS `expertrole2sum`,
+count(`appointment_user`.`assistant_id`) AS `assistantrole2sum` 
+from `appointment_user` where (`appointment_user`.`user_role` = _utf8'专家') 
+group by `appointment_user`.`appointment_id`
+
+select `appointment_user`.`appointment_id` AS `meetid_3`,
+
+count(`appointment_user`.`user_id`) AS `expertrole2sum`,
+count(`appointment_user`.`assistant_id`) AS `assistantrole2sum` 
+from `appointment_user` where (`appointment_user`.`user_role` = _utf8'专家' and `appointment_user`.`remarks` <> _utf8'已拒绝' ) 
+group by `appointment_user`.`appointment_id`
+
+
+	 
+	 
+//
+select `v_meetinfo`.`appointment_id` AS `appointment_id`,
+`v_meetinfo`.`COUNT(user_id)` AS `COUNT(user_id)`,
+`v_meetinfo`.`count(``appointment_user``.``assistant_id``)` AS `count(``appointment_user``.``assistant_id``)`,
+`v_meetinfo`.`count(``appointment_user``.``user_role``  )` AS `vreportnum`,
+`v_meetinfo_role`.`meet_id` AS `meet_id`,
+`v_meetinfo_role`.`userrole1sum` AS `userrole1sum`,
+`v_meetinfo_role`.`assisrole2sum` AS `vhelp_report`,
+`v_meetinfo_expert`.`meetid_3` AS `meetid_3`,
+`v_meetinfo_expert`.`expertrole2sum` AS `vexpertnum`,
+`v_meetinfo_expert`.`assistantrole2sum` AS `vhelp_expert` 
+
+from ((`v_meetinfo` left join `v_meetinfo_role` on((`v_meetinfo`.`appointment_id` = `v_meetinfo_role`.`meet_id`))) left join `v_meetinfo_expert` on((`v_meetinfo`.`appointment_id` = `v_meetinfo_expert`.`meetid_3`)))
+
+//update 设置汇报人数，专家人数
+update appointment,v_meet_joinall
+set appointment.report_num=v_meet_joinall.vreportnum  ,
+ appointment.expert_num=v_meet_joinall.vexpertnum ,
+ where appointment.id= v_meet_joinall.appointment_id
+ 
+

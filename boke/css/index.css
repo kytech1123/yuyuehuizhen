@@ -1,0 +1,113 @@
+<style>
+body{
+	margin:0px;
+	padding:0px;
+}
+.qa_msginfo{
+	margin-top:5px;
+	padding-top:10px;
+ 	padding-left:10px;
+	background-color:#CF3;
+ 	color:#B50;
+ 	width: 100%;
+ 	height: 30px;
+ 	border-radius: 10px;
+}
+.qa_msginfo a{
+text-decoration: none;
+}
+/* 下划线 */
+.menu1 a, .menu2 a, .menu_robot a{
+	 color:#fff;
+	text-decoration: none;	
+	}
+.menu1, .menu2, .menu_robot{
+	background-color:#6B6;
+ color:#fff;
+ font-size:20px;
+ margin-top:2px;
+ margin-left:2px;
+ margin-right:2px;
+ margin-bottom:2px;
+ width: 30%;
+ height: 60px;
+ line-height:60px;
+ text-align: center;
+ vertical-align: middle;
+ float:left;
+ border-radius: 10px;
+}
+/* 换行 */
+.row_br{
+	clear:both;
+/* 	float:none; */
+} 
+
+.menu_meet div{
+	background-color:#5A0;
+ color:#FFF;
+ font-size:20px;
+ 
+ margin:2px;
+ 
+ width: 23%;
+ height: 60px;
+ line-height:60px;
+ text-align: center;
+
+ vertical-align: middle;
+
+ float:left;
+ border-radius: 10px;
+}
+.menu_meet div a:VISITED{
+	text-decoration: none;
+}	
+.menu_meet_a:VISITED{
+	text-decoration: none;
+}
+.menu_qa div{
+	background-color:#5A0;
+ color:#FFF;
+ font-size:20px;
+ margin-top:2px;
+ margin-left:2px;
+ margin-right:2px;
+ margin-bottom:2px;
+ width: 48%;
+ height: 60px;
+ line-height:60px;
+ text-align: center;
+ vertical-align: middle;
+ float:left;
+ border-radius: 10px;
+}
+.main_ul{
+	list-style: none;
+}
+.main_ul li
+{
+ margin-top:5px;
+ margin-left:10px;
+ margin-right:10px;
+ margin-bottom:5px;	
+}
+
+/*  top 顶部导航栏 CSS */
+.top_nag{
+	width:100%;
+	height:60px;
+	background-color: #71bd71;
+	position: fixed;
+	}
+.top_p1{
+	float:left;
+}
+.top_p2{
+	float:right;
+}
+.top_p1 a img, .top_p2 a img{
+		height:60px;
+
+	}
+</style>

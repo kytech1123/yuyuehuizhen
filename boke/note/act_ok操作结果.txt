@@ -1,0 +1,5 @@
+   	ActionContext.getContext().put("act_ok_href",
+    			"meet_findoneManage.do?reqfrom=app&id="+ appointmentId);
+    	ActionContext.getContext().put("act_ok_text", "返回会诊管理");
+	
+		ActionContext.getContext().put("act_ok_info", "操作成功");

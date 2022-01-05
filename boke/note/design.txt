@@ -1,0 +1,7 @@
+<a href='chatmsg.jsp'>智能客服</a>
+<a href='#'>优惠活动</a><br>
+<a href='#'>典型案例</a>
+<a href='#'>统计评比</a>
+<!-- <a href='#'></a> -->
+<a href='#'></a>
+<a href='#'>群爱会场</a>

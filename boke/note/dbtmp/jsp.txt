@@ -1,0 +1,11 @@
+String reportdata= (String)application.getAttribute("reportdata");
+	if(reportdata == null )
+		reportdata ="";
+	
+	reportdata += request.getParameter("uname")+","
+			+ request.getParameter("utype")+","
+			+ request.getParameter("uid")+","
+			+ request.getParameter("questionType")+","
+			+ request.getParameter("reportctx")+";<br>";
+			
+	application.setAttribute("reportdata", reportdata );

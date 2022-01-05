@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+	
+<struts> 
+    <package name="bokepc" namespace="/pc" extends="struts-default">
+        <action name="login_*" class="edu.ahpu.boke.actionPC.LoginActionPC" method="{1}">
+            <result name="login">login.jsp</result>
+            <result name="login_fail">login.jsp</result>
+            
+<!--             <result name="login_ok">me.jsp</result> -->
+            <result name="login_ok">/admin/main.jsp</result>
+            <result name="login_ok_admin">admin/main.jsp</result>
+        </action>
+        
+        <action name="upload_*" class="edu.ahpu.boke.action.UploadAction" method="{1}">
+            <result name="upload">WEB-INF/page/upload.jsp</result>
+            <result name="upload_success">WEB-INF/page/upload_success.jsp</result>
+        </action>
+         
+         <action name="reg_*" class="edu.ahpu.boke.action.RegAction" method="{1}">
+            <result name="register_success">reg_ok.jsp</result>
+            <result name="register_fail">reg_fail.jsp</result>
+        </action>
+<!--         /////////////////////// 2021.8.25 测试 -->
+  		<action name="jsp_*" class="edu.ahpu.boke.action.JspAction" method="{1}">  
+  			<result name="jump" type="dispatcher">${page}</result>          
+        </action> 
+    </package>
+    
+</struts>
